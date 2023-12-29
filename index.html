@@ -43,6 +43,7 @@ function fetchWhoisData(domain) {
     fetch(`https://whois.freeaiapi.xyz/?name=${domain}&suffix=com`)
         .then(response => response.json())
         .then(data => {
+            console.log(data); // 打印数据以便检查
             displayResult(data);
         })
         .catch(error => {
